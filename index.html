@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GreaterwithGod</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: linear-gradient(to right, #1e3a8a, #3b82f6);
+      color: white;
+      padding: 30px;
+    }
+
+    .card {
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px;
+      margin: auto;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      background: #1e3a8a;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🙏 GreaterwithGod</h1>
+  <p>Daily Inspiration for your faith journey</p>
+
+  <div class="card" id="message">
+    Walk by faith, not by sight.
+  </div>
+
+  <button onclick="newMessage()">New Message</button>
+
+  <script>
+    const messages = [
+      "Walk by faith, not by sight.",
+      "God is within her, she will not fall.",
+      "With God all things are possible.",
+      "Trust in the Lord with all your heart.",
+      "Be strong and courageous."
+    ];
+
+    function newMessage() {
+      const el = document.getElementById("message");
+
+      const random = Math.floor(Math.random() * messages.length);
+      el.innerText = messages[random];
+
+      el.style.transform = "scale(1.1)";
+      setTimeout(() => {
+        el.style.transform = "scale(1)";
+      }, 150);
+    }
+  </script>
+
+</body>
+</html>
